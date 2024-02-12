@@ -1,0 +1,15 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+  background-color: var(--block-color);
+  box-shadow: var(--shadow-block);
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+}

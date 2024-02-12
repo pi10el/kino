@@ -1,0 +1,15 @@
+@import '../../views/styles/mixins.scss';
+
+.slider {
+  cursor: grab;
+  user-select: none;
+  position: relative;
+  height: 520px;
+
+  & > h1 {
+    position: absolute;
+    z-index: 5;
+    left: step(2);
+    top: step(2);
+  }
+}

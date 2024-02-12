@@ -1,0 +1,13 @@
+.overlay {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--overlay-color);
+
+  &:disabled {
+    pointer-events: none;
+    opacity: 0;
+  }
+}

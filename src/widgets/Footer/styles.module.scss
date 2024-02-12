@@ -1,0 +1,31 @@
+.footer {
+  width: 100%;
+  margin-top: 30px;
+  padding: 20px 0;
+  background-color: var(--block-color);
+  box-shadow: var(--shadow-block);
+
+  & > div {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+
+    & > a {
+      margin-left: 10px;
+      opacity: 0.5;
+      transition: 0.15s ease;
+
+      & > svg {
+        fill: #fff;
+        width: 30px;
+        height: 30px;
+      }
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+}

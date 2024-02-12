@@ -1,0 +1,75 @@
+$ui-index-1: 1; // Для наползающих элементов в общем потоке
+$ui-index-2: 2; // Для наползающих элементов в общем потоке
+$ui-index-4: 3; // Для сайдбаров
+$ui-index-3: 4; // Для масок
+$ui-index-5: 5; // Для модалок
+$ui-index-6: 6; // Для элементов, перекрывающих все
+
+$ui-step: 5px; // шаг отступа
+
+$mouse-device: '(hover: hover) and (pointer: fine)';
+$touch-device: '(hover: none) and (pointer: coarse)';
+
+// .button {
+//   &:hover {
+//     @media #{$mouse-device} {
+//       // только для мышки
+//     }
+//   }
+// }
+
+@function step($size) {
+  @return $ui-step * $size;
+}
+
+@mixin ui-block {
+  background-color: var(--block-color);
+}
+
+@mixin ui-border {
+  border: 1px solid var(--accent-color);
+}
+
+@mixin ui-padding($direction, $size) {
+  @if ($direction == top) {
+    padding-top: $ui-step * $size;
+  }
+
+  @if ($direction == bottom) {
+    padding-bottom: $ui-step * $size;
+  }
+
+  @if ($direction == left) {
+    padding-left: $ui-step * $size;
+  }
+
+  @if ($direction == right) {
+    padding-right: $ui-step * $size;
+  }
+
+  @if ($direction == all) {
+    padding: $ui-step * $size;
+  }
+}
+
+@mixin ui-margin($direction, $size) {
+  @if ($direction == top) {
+    margin-top: $ui-step * $size;
+  }
+
+  @if ($direction == bottom) {
+    margin-bottom: $ui-step * $size;
+  }
+
+  @if ($direction == left) {
+    margin-left: $ui-step * $size;
+  }
+
+  @if ($direction == right) {
+    margin-right: $ui-step * $size;
+  }
+
+  @if ($direction == all) {
+    margin: $ui-step * $size;
+  }
+}

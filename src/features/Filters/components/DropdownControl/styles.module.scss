@@ -1,0 +1,18 @@
+.content {
+  position: fixed;
+  z-index: 50;
+  top: 90px;
+  padding: 10px;
+  max-width: 320px;
+  min-width: 320px;
+  border-radius: 5px;
+  background-color: var(--block-color);
+  transition: 0.15s ease;
+
+  @media (max-width: 840px) {
+    position: relative;
+    top: 0;
+    width: 100%;
+    max-width: 100%;
+  }
+}

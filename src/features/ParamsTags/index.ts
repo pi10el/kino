@@ -1,0 +1,1 @@
+export { ParamsTags } from './components';

@@ -1,0 +1,144 @@
+.content {
+  width: 100%;
+  margin-top: 10px;
+
+  p {
+    font-size: 14px;
+  }
+}
+
+.labels {
+  display: flex;
+  margin-top: 5px;
+  margin-bottom: 15px;
+
+  & > div {
+    margin-left: 10px;
+  }
+
+  & label {
+    cursor: text;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    border-radius: 5px;
+    border: 1px solid var(--border-color);
+    background-color: var(--background-grey);
+    padding-right: 5px;
+    font-size: 14px;
+    overflow: hidden;
+
+    & ~ label {
+      margin-left: 10px;
+    }
+  }
+
+  & input {
+    font-size: 14px;
+    width: 100%;
+    margin-right: 5px;
+    padding: 5px 10px;
+    background-color: transparent;
+    appearance: textfield;
+
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      appearance: none;
+    }
+  }
+}
+
+.inputs {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  margin-bottom: 15px;
+
+  & > input {
+    &:nth-child(1) {
+      right: 21px;
+    }
+    &:nth-child(2) {
+      left: 21px;
+    }
+  }
+}
+
+.slider {
+  position: relative;
+  width: 100%;
+  z-index: -1;
+}
+
+.track,
+.range {
+  position: absolute;
+  height: 5px;
+}
+
+.track {
+  background-color: var(--background-page);
+  width: 100%;
+  z-index: 1;
+}
+
+.range {
+  background-color: var(--accent-dark);
+  opacity: 0.7;
+  z-index: 2;
+}
+
+.thumb,
+.thumb::-webkit-slider-thumb {
+  appearance: none;
+}
+
+.thumb {
+  pointer-events: none;
+  position: absolute;
+  height: 0;
+  width: calc(100% - 21px);
+  outline: none;
+}
+
+/* For Chrome browsers */
+.thumb::-webkit-slider-thumb {
+  position: relative;
+  cursor: pointer;
+  background-color: var(--background-grey);
+  border: 1px solid var(--accent-color);
+  box-shadow: 0 0 0 0 var(--accent-dark);
+  // border: none;
+  height: 20px;
+  width: 20px;
+  border-radius: 5px;
+  margin-top: 4px;
+  pointer-events: all;
+  transition: 0.2s ease;
+
+  &:hover {
+    box-shadow: 0 0 0 4px var(--accent-dark);
+  }
+}
+
+/* For Firefox browsers */
+.thumb::-moz-range-thumb {
+  position: relative;
+  cursor: pointer;
+  background-color: var(--background-grey);
+  border: 1px solid var(--accent-color);
+  box-shadow: 1px 1px 3px 0 var(--accent-dark);
+  // border: none;
+  height: 20px;
+  width: 20px;
+  border-radius: 5px;
+  margin-top: 4px;
+  pointer-events: all;
+  transition: 0.2s ease;
+
+  &:hover {
+    box-shadow: 0 0 0 4px var(--accent-dark);
+  }
+}

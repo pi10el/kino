@@ -1,0 +1,77 @@
+@import '../../../views/styles/mixins.scss';
+
+.item {
+  user-select: none;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  user-select: none;
+  width: 170px;
+  height: 250px;
+  overflow: hidden;
+  border-radius: 5px;
+  @include ui-block;
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 70%;
+    background: linear-gradient(
+      0deg,
+      rgba(45, 49, 51, 0.8) 5%,
+      rgba(45, 49, 51, 0) 100%
+    );
+    transition: 0.15s ease-in;
+  }
+
+  &:hover::after {
+    height: 100%;
+  }
+
+  & ~ .item {
+    @include ui-margin('left', 3);
+  }
+
+  & > img {
+    pointer-events: none;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.1s linear;
+  }
+}
+
+.rating {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  font-size: 12px;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.type {
+  position: absolute;
+  left: 5px;
+  top: 5px;
+  font-size: 12px;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: var(--block-color);
+}
+
+.name {
+  position: absolute;
+  z-index: 2;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  padding: step(1) step(2);
+  font-size: 14px;
+  font-weight: 700;
+}

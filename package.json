@@ -1,0 +1,29 @@
+{
+  "name": "kino",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "deploy": "next build && pm2 start pm2.config.js",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@reduxjs/toolkit": "^1.9.3",
+    "@vercel/analytics": "^0.1.9",
+    "framer-motion": "^9.0.3",
+    "next": "^13.4.10",
+    "react": "^18.2.0",
+    "react-dom": "18.2.0",
+    "react-redux": "^8.0.5",
+    "styled-components": "^5.3.9"
+  },
+  "devDependencies": {
+    "@types/node": "^18.13.0",
+    "@types/react": "^18.0.28",
+    "@types/react-dom": "^18.0.11",
+    "sass": "^1.58.1",
+    "typescript": "^4.9.5"
+  }
+}
