@@ -5,7 +5,7 @@
 - Архитектура проекта построена на шаблоне [**Feature-Sliced Design(FSD)**](https://feature-sliced.design/ru/).
 - Проект имеет отзывчивый (Responsive) интерфейс.
 
-## 💻 website: ➡️ ? ⬅️
+## 💻 website: ➡️ https://kino-pi10el.vercel.app/ ⬅️
 
 ## 📜 Лицензия: [![MIT License](https://img.shields.io/static/v1?label=License&message=Attribution-NonCommercial-ShareAlike&color=<COLOR>)](https://creativecommons.org/licenses/by-nc-sa/3.0/)
 
